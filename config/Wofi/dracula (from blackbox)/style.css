@@ -1,0 +1,68 @@
+window {
+    background-color: rgba(30, 31, 41, 0.8); /* #1e1f29 с прозрачностью 80% */
+    color: #ffffff; /* белый текст */
+    border-radius: 8px;
+    border: 1px solid rgba(136, 228, 248, 0.3);
+}
+
+#input {
+    color: #ffffff;
+    background-color: rgba(40, 41, 54, 0.9);
+    border: 1px solid rgba(136, 228, 248, 0.5);
+    border-radius: 4px;
+    padding: 8px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+#input:focus {
+    border-color: #88e4f8;
+}
+
+#inner-box {
+    margin: 10px;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 20px;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0;
+    background-color: transparent;
+}
+
+#entry {
+    padding: 8px;
+    margin: 2px 0;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: rgba(136, 228, 248, 0.8); /* #88e4f8 с прозрачностью */
+    color: #1e1f29; /* темный текст для контраста на выделенном фоне */
+    font-weight: bold;
+}
+
+#text:selected {
+    color: #1e1f29;
+}
+
+#img:selected {
+    background-color: transparent;
+}
+
+#unselected {
+    color: #ffffff;
+}
+
+#selected {
+    color: #1e1f29;
+}
+
+#expander-row {
+    background-color: rgba(30, 31, 41, 0.9);
+}
