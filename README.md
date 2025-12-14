@@ -12,6 +12,8 @@ ____________________________________________________
 #### dracula theme (from blackbox)
 #### purple theme (made by me)
 #### kanagawa-wave (made by me)
+
+
 #### есть иконки и поиск
 ____________________________________________________
 ## Alacritty
