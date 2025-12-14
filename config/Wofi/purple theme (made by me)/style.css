@@ -1,0 +1,58 @@
+/* Конфигурация для Wofi - Dracula цветовая схема */
+
+window {
+    margin: 0px;
+    border: 2px solid #bd93f9;
+    background-color: rgba(30, 31, 41, 0.8);
+    border-radius: 10px;
+}
+
+#input {
+    margin: 5px;
+    border: 2px solid #926ee4;
+    color: #f8f8f2;
+    background-color: rgba(68, 71, 90, 0.8);
+    border-radius: 5px;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: rgba(30, 31, 41, 0.8);
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: rgba(30, 31, 41, 0.8);
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+    background-color: rgba(30, 31, 41, 0.8);
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: rgba(248, 248, 242, 0.8);
+}
+
+#entry {
+    margin: 0px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(30, 31, 41, 0.8);
+}
+
+#entry:selected {
+    background-color: rgba(146, 110, 228, 0.8);
+    border: none;
+    outline: none;
+}
+
+#entry:selected #text {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
