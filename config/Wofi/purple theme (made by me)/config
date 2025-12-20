@@ -1,42 +1,59 @@
+# ~/.config/wofi/config
+
 # Основные настройки
 show=drun
-prompt=Приложения
-term=foot
+prompt=Поиск
 insensitive=true
-
-# Внешний вид
-width=600
-height=400
+width=700
+height=600
 location=center
-orientation=vertical
-lines=10
+lines=12
 columns=1
 line_wrap=off
+dynamic_lines=false
 
-# Цветовая схема (можно настроить под себя)
+# Поиск и фильтрация
+allow_markup=true
+exec_search=true
+hide_scrollbar=true
+parse_actions=true
+filter=name,generic_name,comment,categories,keywords
+
+# Внешний вид
+term=xterm-256color
 allow_images=true
-image_size=24
-dynamic_lines=true
+image_size=32
+icon_theme=Adwaita
+gtk_dark=true
+no_escape=false
+
+# Шрифты
+font="JetBrainsMono Nerd Font 13"
 
 # Поведение
-hide_scrollbar=true
-cycle=true
-always_parse_args=true
+hide_on_exec=true
 print_command=true
-gtk_dark=true
+cache_file=/dev/null
+sort_order=default
+offset_x=0
+offset_y=0
 
-# Управление с клавиатуры
-key_expand=Tab
+# Клавиши
+key_up=Up,k
+key_down=Down,j
+key_left=Left,h
+key_right=Right,l
 key_exit=Esc,Escape
-key_clear=Shift+Delete
-key_delete=Delete
-key_accept=Return,KP_Enter
-key_select=Control+space
-key_down=Down
-key_up=Up
-key_left=Left
-key_right=Right
-key_j=Down
-key_k=Up
-key_h=Left
-key_l=Right
+key_select=Return,Enter
+key_clear=Ctrl+r
+key_remove_word=Ctrl+Backspace
+key_back=BackSpace
+key_expand=Tab
+key_first=Home
+key_last=End
+key_page_up=Page_Up
+key_page_down=Page_Down
+key_mode=Ctrl+Tab
+key_tab=Tab
+key_select1=Ctrl+Return
+key_select2=Ctrl+Space
