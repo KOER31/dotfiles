@@ -13,7 +13,7 @@ ____________________________________________________
 ____________________________________________________
 ## Wofi
 #### dracula theme (from blackbox)
-#### purple theme (made by me)
+#### purple theme (made by me)+анимации
 #### kanagawa-wave (made by me)
 
 
