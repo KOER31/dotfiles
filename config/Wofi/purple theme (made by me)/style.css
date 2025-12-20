@@ -1,57 +1,215 @@
-
 window {
     margin: 0px;
-    border: 2px solid #bd93f9;
-    background-color: rgba(30, 31, 41, 0.8);
+    border: 2px solid rgba(189, 147, 249, 0.6);
+    background-color: rgba(30, 31, 41, 0.6);
     border-radius: 10px;
+    animation: fadeIn 0.3s ease-out;
+    backdrop-filter: blur(10px);
+    width: 500px;
+    height: 450px;
 }
 
 #input {
-    margin: 5px;
-    border: 2px solid #926ee4;
-    color: #f8f8f2;
-    background-color: rgba(68, 71, 90, 0.8);
-    border-radius: 5px;
+margin: 8px;
+border: 2px solid rgba(146, 110, 228, 0.6);
+color: #f8f8f2;
+background-color: rgba(68, 71, 90, 0.6);
+border-radius: 6px;
+padding: 8px;
+font-size: 13px;
+transition: all 0.3s ease;
+backdrop-filter: blur(5px);
+}
+
+#input:focus {
+border-color: rgba(189, 147, 249, 0.8);
+box-shadow: 0 0 10px rgba(189, 147, 249, 0.4);
+background-color: rgba(68, 71, 90, 0.7);
 }
 
 #inner-box {
-    margin: 5px;
-    border: none;
-    background-color: rgba(30, 31, 41, 0.8);
+margin: 3px;
+padding: 3px;
+border: none;
+background-color: transparent;
 }
 
 #outer-box {
-    margin: 5px;
-    border: none;
-    background-color: rgba(30, 31, 41, 0.8);
+margin: 3px;
+padding: 3px;
+border: none;
+background-color: transparent;
 }
 
 #scroll {
-    margin: 0px;
-    border: none;
-    background-color: rgba(30, 31, 41, 0.8);
+margin: 0px;
+border: none;
+background-color: transparent;
 }
 
 #text {
-    margin: 5px;
-    border: none;
-    color: rgba(248, 248, 242, 0.8);
+margin: 6px;
+border: none;
+color: #f8f8f2;
+font-size: 13px;
+font-weight: 500;
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+transition: color 0.2s ease;
+}
+
+#entry image {
+opacity: 0.9;
+filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
 }
 
 #entry {
-    margin: 0px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(30, 31, 41, 0.8);
+margin: 3px;
+padding: 6px 10px;
+border: none;
+border-radius: 5px;
+background-color: rgba(40, 42, 54, 0.6);
+animation: fadeIn 0.4s ease-out;
+animation-fill-mode: both;
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+backdrop-filter: blur(5px);
+}
+
+#entry:hover {
+background-color: rgba(68, 71, 90, 0.7);
+transform: translateX(4px);
+backdrop-filter: blur(8px);
 }
 
 #entry:selected {
-    background-color: rgba(146, 110, 228, 0.8);
-    border: none;
-    outline: none;
+background: linear-gradient(135deg, rgba(146, 110, 228, 0.8), rgba(189, 147, 249, 0.8));
+color: #ffffff;
+animation: selectedPulse 0.6s ease-out;
+backdrop-filter: blur(5px);
 }
 
 #entry:selected #text {
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: bold;
+color: #ffffff;
+font-weight: bold;
+text-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+}
+
+@keyframes scrollAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#entry:not(:first-child) {
+animation: scrollAppear 0.4s ease-out;
+animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes selectedPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(146, 110, 228, 0);
+    }
+    50% {
+        transform: scale(1.015);
+        box-shadow: 0 0 15px rgba(146, 110, 228, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(146, 110, 228, 0);
+    }
+}
+
+#entry:nth-child(1) { animation-delay: 0.05s; }
+#entry:nth-child(2) { animation-delay: 0.1s; }
+#entry:nth-child(3) { animation-delay: 0.15s; }
+#entry:nth-child(4) { animation-delay: 0.2s; }
+#entry:nth-child(5) { animation-delay: 0.25s; }
+#entry:nth-child(6) { animation-delay: 0.3s; }
+#entry:nth-child(n+7) { animation-delay: 0.35s; }
+
+window {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes inputFocus {
+    from {
+        transform: scale(0.98);
+        opacity: 0.7;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#input {
+animation: inputFocus 0.4s ease-out 0.1s both;
+}
+
+scrollbar {
+    background-color: transparent;
+    border: none;
+    min-width: 0;
+    max-width: 0;
+}
+
+scrollbar slider {
+    background-color: transparent;
+    border: none;
+    min-width: 0;
+    max-width: 0;
+    min-height: 0;
+}
+
+scrollbar, scrollbar slider {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes searchAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#entry {
+animation: searchAppear 0,3s ease-out;
+}
+
+#text {
+filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.9));
+}
+
+#tooltip {
+background-color: rgba(30, 31, 41, 0.6);
+border: 1px solid rgba(189, 147, 249, 0.6);
+border-radius: 6px;
+padding: 6px;
+backdrop-filter: blur(10px);
+font-size: 12px;
+}
+
+#tooltip #text {
+text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 }
