@@ -9,7 +9,7 @@ if status is-interactive
     fastfetch
 end
 
-# Полезные алиасы для Arch
+# алиасы для Arch
 alias update='sudo pacman -Syu'
 alias install='sudo pacman -S'
 alias remove='sudo pacman -Rns'
